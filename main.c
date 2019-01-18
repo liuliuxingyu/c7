@@ -125,7 +125,24 @@ int main(){
 
         }
         if(code==7){
+            double max=0.0;
+            int stuID=0;
             
+            for(int i = 0; i < index; i++)
+            {
+                if(arr[i].yuwen>=60 && arr[i].shuxue>=60 && arr[i].yingyu>=60){
+                    double avg=(arr[i].yuwen+arr[i].shuxue+arr[i].yingyu)/3.0;
+                    if(max<avg){
+                        max=avg;
+                        stuID=i;
+                    }
+                }
+            }
+            printf("pingjunfenzuigaoqiemeiyoubujigekemudexueshengxingming%s,yuwen:%d,shuxue:%d,yingyu:%d\n",arr[stuID].name,arr[stuID].yuwen,arr[stuID].shuxue,arr[stuID].yingyu);
+            printf("dianjihuichejixu\n");
+             char x;
+            scanf("%c",&x);
+            scanf("%c",&x);
         }
         if(code==8){
             printf("tuichu\n");
