@@ -70,7 +70,7 @@ int main(){
             
             for(int i = 0; i < index; i++)
             {
-                printf("di%dgexueshengdechengjiwei%d,%d,%d\n",i+1,arr[i].yuwen,arr[i].shuxue,arr[i].yingyu);
+                printf("di%dgexuesheng%sdechengjiwei%d,%d,%d\n",i+1,arr[i].name,arr[i].yuwen,arr[i].shuxue,arr[i].yingyu);
             }
             printf("xianshichenggong,dianjihuichejixu\n");
              char x;
@@ -79,7 +79,17 @@ int main(){
 
         }
         if(code==4){
-            
+          for(int i=0;i<index;i++){
+              int sum=arr[i].yuwen+arr[i].shuxue+arr[i].yingyu;
+              if(sum<180){
+                  printf("di%dgexuesheng%schengjibujige\n",i+1,arr[i].name);
+              }
+          }
+          printf("shaixuanchenggong,dianjihuichejixu\n");
+           char x;
+            scanf("%c",&x);
+            scanf("%c",&x);
+
         }
         if(code==5){
             
